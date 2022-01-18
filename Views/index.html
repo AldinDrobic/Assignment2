@@ -7,22 +7,22 @@
     <title>Bank</title>
 </head>
 <body>
-    <div>
+    <div id="Bank">
     <h1>Bank account</h1>
     <h3>Joe Banker</h3>
     <b>Balance:</b> <b id="balance">0</b> <br><br>
 
     <button onclick="getLoan()">Get loan</button> <br><br>
 
-    <div>
+    <div id="outstandingLoanDiv" style="display: none;">
     
     <b>Outstanding loan</b> <b id="outstandingLoan">0</b> <b>kr</b>  <br>
     <button onclick="repayLoan()">Repay loan</button>  
     </div>
-    
+
     </div>
 
-    <div>
+    <div id="Work">
         <h1>Work</h1>
         <b>Pay:</b> <b id="pay">0</b> <br><br>   
     
@@ -30,9 +30,29 @@
         <button onclick="incrementPay()">Work</button> <br><br>
     
     </div>
+
+
+    <div id="StorePreview">
+        <h1>Store</h1>
+        <select name="computer" id="computerListId" onchange="getSelectedComputer()"></select> <br><br>
+        <b id="computerFeatures">Desc</b>
+
+    </div> <br><br>
+
+
+    <div id="StoreFullView">
+        <h2 id="computerTitle">Titel</h2>
+        <b id="computerDescription">Description</b><br>
+        <b id="computerPrice">Price</b><br><br>
+        <img id="computerImage">
+        <button onclick="buyComputer()">Buy now</button>
+
+        <br><br>
+    </div>
     
+    <script src="/Model/JoeBanker.js"></script>
 </body>
 <footer>
-    <script src="/Model/JoeBanker.js"></script>
+    
 </footer>
 </html>
